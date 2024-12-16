@@ -1,0 +1,63 @@
+﻿<Window x:Class="RockPaperScissorsApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RockPaperScissorsApp"
+        mc:Ignorable="d"
+        Title="Rock, Paper, Scissors" Height="350" Width="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" BorderBrush="Gray" BorderThickness="3" CornerRadius="10" Margin="2">
+            <Grid  >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Button Grid.Column="1" Content="Камень" Height="50" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            FontFamily="consolas" FontSize="20"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Button Grid.Column="1" Content="Ножницы" Height="50" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            FontFamily="consolas" FontSize="20"/>
+                </Grid>
+                <Grid Grid.Column="3">
+                    <Button Grid.Column="1" Content="Бумага" Height="50" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            FontFamily="consolas" FontSize="20"/>
+                </Grid>
+            </Grid>
+        </Border>
+        <Border Grid.Row="1" BorderBrush="Gray" BorderThickness="3" CornerRadius="10" Margin="2">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock FontSize="20" FontFamily="consolas" TextAlignment="Center" VerticalAlignment="Center">
+                        <Run Text="Результат: "/>
+                        <Run Text="{Binding ResultValue}"/>
+                    </TextBlock>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <TextBlock FontSize="20" FontFamily="consolas" TextAlignment="Center" VerticalAlignment="Center">
+                        <Run Text="Выбор игрока: "/>
+                        <Run Text="{Binding PlayerChoice}"/>
+                    </TextBlock>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <TextBlock FontSize="20" FontFamily="consolas" TextAlignment="Center" VerticalAlignment="Center">
+                        <Run Text="Выбор противника: "/>
+                        <Run Text="{Binding EnemyChoice}"/>
+                    </TextBlock>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
