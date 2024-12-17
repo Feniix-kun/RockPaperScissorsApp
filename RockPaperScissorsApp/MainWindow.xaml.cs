@@ -23,6 +23,9 @@ namespace RockPaperScissorsApp
         public MainWindow()
         {
             InitializeComponent();
+            MainContainerViewModel containerViewModel = new MainContainerViewModel();
+            DataContext = containerViewModel;
+
         }
     }
 }

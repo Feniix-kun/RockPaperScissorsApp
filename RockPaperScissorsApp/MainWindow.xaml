@@ -20,15 +20,15 @@
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0">
                     <Button Grid.Column="1" Content="Камень" Height="50" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"
-                            FontFamily="consolas" FontSize="20"/>
+                            FontFamily="consolas" FontSize="20" Command="{Binding GameLogic.OnChoisePlayerCommand}" CommandParameter="Rock"/>
                 </Grid>
                 <Grid Grid.Column="1">
                     <Button Grid.Column="1" Content="Ножницы" Height="50" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"
-                            FontFamily="consolas" FontSize="20"/>
+                            FontFamily="consolas" FontSize="20" Command="{Binding GameLogic.OnChoisePlayerCommand}" CommandParameter="Paper"/>
                 </Grid>
                 <Grid Grid.Column="3">
                     <Button Grid.Column="1" Content="Бумага" Height="50" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"
-                            FontFamily="consolas" FontSize="20"/>
+                            FontFamily="consolas" FontSize="20" Command="{Binding GameLogic.OnChoisePlayerCommand}" CommandParameter="Scissors"/>
                 </Grid>
             </Grid>
         </Border>
@@ -42,19 +42,19 @@
                 <Grid Grid.Row="0">
                     <TextBlock FontSize="20" FontFamily="consolas" TextAlignment="Center" VerticalAlignment="Center">
                         <Run Text="Результат: "/>
-                        <Run Text="{Binding ResultValue}"/>
+                        <Run Text="{Binding GameViewModel.ResultValue}"/>
                     </TextBlock>
                 </Grid>
                 <Grid Grid.Row="1">
                     <TextBlock FontSize="20" FontFamily="consolas" TextAlignment="Center" VerticalAlignment="Center">
                         <Run Text="Выбор игрока: "/>
-                        <Run Text="{Binding PlayerChoice}"/>
+                        <Run Text="{Binding GameViewModel.PlayerChoice}"/>
                     </TextBlock>
                 </Grid>
                 <Grid Grid.Row="2">
                     <TextBlock FontSize="20" FontFamily="consolas" TextAlignment="Center" VerticalAlignment="Center">
                         <Run Text="Выбор противника: "/>
-                        <Run Text="{Binding EnemyChoice}"/>
+                        <Run Text="{Binding GameViewModel.EnemyChoice}"/>
                     </TextBlock>
                 </Grid>
             </Grid>
