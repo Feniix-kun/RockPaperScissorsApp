@@ -12,6 +12,9 @@ namespace RockPaperScissorsApp
         public string enemyChoice;
         public string playerChoice;
         public string resultValue;
+        public int winValue = 0;
+        public int loseValue = 0;
+        public int drawValue = 0;
         public event PropertyChangedEventHandler PropertyChanged;
 
         public string EnemyChoice
@@ -49,6 +52,42 @@ namespace RockPaperScissorsApp
                 {
                     resultValue = value;
                     OnPropertyChanged(nameof(ResultValue));
+                }
+            }
+        }
+        public int WinValue
+        {
+            get => winValue;
+            set
+            {
+                if (winValue != value)
+                {
+                    winValue = value;
+                    OnPropertyChanged(nameof(WinValue));
+                }
+            }
+        }
+        public int LoseValue
+        {
+            get => loseValue;
+            set
+            {
+                if (loseValue != value)
+                {
+                    loseValue = value;
+                    OnPropertyChanged(nameof(LoseValue));
+                }
+            }
+        }
+        public int DrawValue
+        {
+            get => drawValue;
+            set
+            {
+                if (drawValue != value)
+                {
+                    drawValue = value;
+                    OnPropertyChanged(nameof(DrawValue));
                 }
             }
         }

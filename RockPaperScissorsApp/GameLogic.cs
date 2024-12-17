@@ -50,16 +50,19 @@ namespace RockPaperScissorsApp
 
             if (PlayerChoice == EnemyChoice)
             {
+                GameViewModel.DrawValue++;
                 UpdateGameData("Ничья");
             }
             else if ((PlayerChoice == "Rock" && EnemyChoice == "Scissors") ||
                      (PlayerChoice == "Paper" && EnemyChoice == "Rock") ||
                      (PlayerChoice == "Scissors" && EnemyChoice == "Paper"))
             {
+                GameViewModel.WinValue++;
                 UpdateGameData("Победа");
             }
             else
             {
+                GameViewModel.LoseValue++;
                 UpdateGameData("Поражение");
             }
         }
