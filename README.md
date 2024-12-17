@@ -1,3 +1,3 @@
 # RockPaperScissorsApp
 
-![Главное окно](Images/image01.jpg)
+![Главное окно](RockPaperScissorsApp/Images/image01.jpg)
